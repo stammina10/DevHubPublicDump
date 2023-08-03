@@ -1,0 +1,70 @@
+<template>
+    <div>
+        <template if:true={travelrequestdatarow}>
+            <div class="slds-var-m-top_small">
+                <div class="slds-grid slds-var-m-left_small">
+                    <div class="slds-col slds-size_1-of-4">
+                        <h6>Travel Request Name</h6>
+                        <p><span>{travelrequestdatarow.travelRequestName}</span></p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-4">
+                        <h6>Travel Request Number</h6>
+                        <p><span>{travelrequestdatarow.travelRequestNumber}</span></p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-4">
+                        <h6>Travel Start Date</h6>
+                        <p><span>{travelrequestdatarow.travelStartDate}</span></p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-4">
+                        <h6>Travel End Date</h6>
+                        <p><span>{travelrequestdatarow.travelStartDate}</span></p>
+                    </div>
+                    </div>
+                    <div class="slds-var-p-top_small"></div>
+                    <div class="slds-grid slds-var-m-left_small">
+                    <div class="slds-col slds-size_1-of-4">
+                        <h6>Travel Status</h6>
+                        <p><span>{travelrequestdatarow.travelStatus}</span></p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-4">
+                        <h6>Place of Travel</h6>
+                        <p><span>{travelrequestdatarow.placeOfTravel}</span></p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-4">
+                        <h6>Out of State</h6>
+                        <p><span>{travelrequestdatarow.OutofState}</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-var-p-top_large"></div>
+            <template for:each={travelrequestdatarow.expenses} for:item="expense" for:index="index">
+               <article key={expense.expenseId} class="slds-card">
+                <div class="slds-grid slds-var-m-left_small">
+                    <div class="slds-float_left">
+                        <h1><b>
+                            Expense {index}
+                        </b>
+                        </h1>
+                    </div>
+                    <div class="slds-var-p-top_small">
+                        <div class="slds-grid slds-var-m-left_small">
+                        <div class="slds-col slds-size_1-of-2">
+                            <h6> Expense Number</h6>
+                            <p><span>{expense.expenceNum}</span></p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <h6> Expense Amount</h6>
+                            <p><span>{expense.expAmount}</span></p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <h6> Expense Type</h6>
+                            <p><span>{expense.expenseType}</span></p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+               </article>
+            </template>
+        </template>
+    </div>
+</template>
