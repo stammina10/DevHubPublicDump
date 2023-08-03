@@ -1,12 +1,38 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
-    }
-  ],
   "name": "Cars",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "57.0"
+  "sourceApiVersion": "57.0",
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true,
+      "package": "firstpackage",
+      "versionName": "ver 1.0",
+      "versionNumber": "1.0.0.NEXT",
+      "versionDescription": "first package with objects"
+    },
+    {
+      "path": "force-app",
+      "package": "secondPackage",
+      "versionName": "ver 1.1",
+      "versionNumber": "1.1.0.NEXT",
+      "default": false,
+      "versionDescription": "Second package with objects"
+    },
+    {
+      "path": "force-app",
+      "package": "ThirdPackage",
+      "versionName": "ver 1.1",
+      "versionNumber": "1.1.0.NEXT",
+      "default": false,
+      "versionDescription": "Third package with objects"
+    }
+  ],
+  "packageAliases": {
+    "firstpackage": "0Ho0K000000004rSAA",
+    "secondPackage": "0Ho0K000000004wSAA",
+    "ThirdPackage": "0Ho0K0000000051SAA",
+    "ThirdPackage@1.1.0-1": "04t0K000001E4jzQAC"
+  }
 }

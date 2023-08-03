@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expense_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Expense Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Food</fullName>
+                <default>false</default>
+                <label>Food</label>
+            </value>
+            <value>
+                <fullName>Cab Fare</fullName>
+                <default>false</default>
+                <label>Cab Fare</label>
+            </value>
+            <value>
+                <fullName>Hotel</fullName>
+                <default>false</default>
+                <label>Hotel</label>
+            </value>
+            <value>
+                <fullName>Air Fare</fullName>
+                <default>false</default>
+                <label>Air Fare</label>
+            </value>
+            <value>
+                <fullName>Bus Fare</fullName>
+                <default>false</default>
+                <label>Bus Fare</label>
+            </value>
+            <value>
+                <fullName>Train Fare</fullName>
+                <default>false</default>
+                <label>Train Fare</label>
+            </value>
+            <value>
+                <fullName>Per Diem</fullName>
+                <default>false</default>
+                <label>Per Diem</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
