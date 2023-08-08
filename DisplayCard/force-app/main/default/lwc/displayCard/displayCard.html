@@ -1,3 +1,12 @@
 <template>
-    
+    <lightning-card title="Coffee Details">
+        <lightning-datatable key-field="Id"
+                             data={coffeeData.data}
+                             columns={column}
+                             onrowaction={handleRowActions}
+        ></lightning-datatable>
+       
+        <div>
+        </div>
+      </lightning-card>
 </template>

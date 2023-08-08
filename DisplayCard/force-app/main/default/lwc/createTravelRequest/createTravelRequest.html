@@ -1,0 +1,82 @@
+<template>
+    <template if:false={createSection}>
+  <lightning-card>
+      <lightning-button label="Click here to create new Travel Request" onclick={handleCreateRequest}></lightning-button>
+  </lightning-card>  
+</template>
+<template if:true={createSection}>
+    <lightning-card title="Create New Travel Request">
+      <lightning-input class="slds-var-p-around_medium" name="travelReqName" label="Travel Request Name" onchange={handleChange} value={travelReqLst.Request_Name__c}></lightning-input>
+      <lightning-input class="slds-var-p-around_medium" name="travelReqStatus" label="Status" onchange={handleChange} value={travelReqLst.Status__c}></lightning-input>
+     <lightning-input class="slds-var-p-around_medium" name="travelStartDt" label="Travel Start Date" onchange={handleChange}></lightning-input>
+     <lightning-input class="slds-var-p-around_medium" name="travelEndDt" label="Travel End Date" onchange={handleChange} value={travelReqLst.End_Date__c} type="date"></lightning-input>
+      <lightning-input class="slds-var-p-around_medium" name="placeofTravel" label="Place of Travel" onchange={handleChange}></lightning-input>
+     <lightning-input class="slds-var-p-around_medium" name="Out of State" label="Out of State" onchange={handleChange}></lightning-input>
+      <div style="text-align: center;">
+          <lightning-button label="Submit" onclick={handleSubmit}></lightning-button>
+          </div>
+    </lightning-card>
+    </template>
+    <div if:true={showLoadingSpinner}>
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </div>
+    <div if:true={displayrecord}>
+  <template if:true={travelData}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <h2 class="slds-text-heading_medium slds-hyphenate">Travel Request</h2>
+            </header>
+            <div class="slds-modal__content slds-var-p-around_medium">
+                <div class="slds-var-m-top_small">
+                    <div class="slds-grid slds-var-m-left_small">
+                        <div class="slds-col slds-size_1-of-4">
+                            <h6>Travel Request Name</h6>
+                            <p><span>{travelData.Request_Name__c}</span></p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            <h6>Travel Request Number</h6>
+                            <p><span>{travelData.Name}</span></p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            <h6>Travel Start Date</h6>
+                            <p><span>{travelData.Start_Date__c}</span></p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            <h6>Travel End Date</h6>
+                            <p><span>{travelData.End_Date__c}</span></p>
+                        </div>
+                    </div>
+                    <div class="slds-var-p-top_small"></div>
+                    <div class="slds-grid slds-var-m-left_small">
+                        <div class="slds-col slds-size_1-of-4">
+                            <h6>Travel Status</h6>
+                            <p><span>{travelData.Status__c}</span></p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            <h6>Place of Travel</h6>
+                            <p><span>{travelData.Place_of_Travel__c}</span></p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            <h6>Out of State</h6>
+                            <p><span>{travelData.Out_of_State__c}</span></p>
+                        </div>
+                    </div>
+                    <div class="slds-var-p-top_large"></div>
+                    <template if:true={displayButton}>
+                         <lightning-button label="Click here to enter Expenses" variant="base" onclick={handleExpenseList}></lightning-button>
+                     </template>
+                    <div class="slds-var-p-top_large"></div>
+                    <template if:true={expenseListDisplay}>
+                       <c-create-expense-dynamic-rows travelrequestid={travelData.Id}></c-create-expense-dynamic-rows>
+                    </template>
+                </div>
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning-button value="Close" label="Close" onclick={handleCloseModal}></lightning-button>
+              </footer>
+        </div>
+    </section>
+  </template>
+    </div>
+</template>
