@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Roast_Sub_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Roast Sub Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Roast__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Light City</fullName>
+                <default>false</default>
+                <label>Light City</label>
+            </value>
+            <value>
+                <fullName>Half City</fullName>
+                <default>false</default>
+                <label>Half City</label>
+            </value>
+            <value>
+                <fullName>Cinnamon</fullName>
+                <default>false</default>
+                <label>Cinnamon</label>
+            </value>
+            <value>
+                <fullName>City</fullName>
+                <default>false</default>
+                <label>City</label>
+            </value>
+            <value>
+                <fullName>American</fullName>
+                <default>false</default>
+                <label>American</label>
+            </value>
+            <value>
+                <fullName>Breakfast</fullName>
+                <default>false</default>
+                <label>Breakfast</label>
+            </value>
+            <value>
+                <fullName>Full City</fullName>
+                <default>false</default>
+                <label>Full City</label>
+            </value>
+            <value>
+                <fullName>High</fullName>
+                <default>false</default>
+                <label>High</label>
+            </value>
+            <value>
+                <fullName>Continental</fullName>
+                <default>false</default>
+                <label>Continental</label>
+            </value>
+            <value>
+                <fullName>New Orleans</fullName>
+                <default>false</default>
+                <label>New Orleans</label>
+            </value>
+            <value>
+                <fullName>European</fullName>
+                <default>false</default>
+                <label>European</label>
+            </value>
+            <value>
+                <fullName>Espresso</fullName>
+                <default>false</default>
+                <label>Espresso</label>
+            </value>
+            <value>
+                <fullName>Viennese</fullName>
+                <default>false</default>
+                <label>Viennese</label>
+            </value>
+            <value>
+                <fullName>Italian</fullName>
+                <default>false</default>
+                <label>Italian</label>
+            </value>
+            <value>
+                <fullName>French</fullName>
+                <default>false</default>
+                <label>French</label>
+            </value>
+            <value>
+                <fullName>Blonde</fullName>
+                <default>false</default>
+                <label>Blonde</label>
+            </value>
+            <value>
+                <fullName>New England</fullName>
+                <default>false</default>
+                <label>New England</label>
+            </value>
+            <value>
+                <fullName>UnRoasted</fullName>
+                <default>false</default>
+                <label>UnRoasted</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Light</controllingFieldValue>
+            <valueName>Light City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Light</controllingFieldValue>
+            <valueName>Half City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Light</controllingFieldValue>
+            <valueName>Cinnamon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Light</controllingFieldValue>
+            <valueName>Blonde</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Light</controllingFieldValue>
+            <valueName>New England</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medium</controllingFieldValue>
+            <valueName>City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medium</controllingFieldValue>
+            <valueName>American</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medium</controllingFieldValue>
+            <valueName>Breakfast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dark</controllingFieldValue>
+            <valueName>High</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dark</controllingFieldValue>
+            <valueName>Continental</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dark</controllingFieldValue>
+            <valueName>New Orleans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dark</controllingFieldValue>
+            <valueName>European</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dark</controllingFieldValue>
+            <valueName>Espresso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dark</controllingFieldValue>
+            <valueName>Viennese</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dark</controllingFieldValue>
+            <valueName>Italian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dark</controllingFieldValue>
+            <valueName>French</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medium Dark</controllingFieldValue>
+            <valueName>Full City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UnRoasted</controllingFieldValue>
+            <valueName>UnRoasted</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

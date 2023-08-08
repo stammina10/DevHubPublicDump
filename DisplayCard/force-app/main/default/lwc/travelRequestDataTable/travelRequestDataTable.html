@@ -1,0 +1,61 @@
+<!-- sldsValidatorIgnore -->
+<template>
+  <div style="height: 300px;">
+  <lightning-card title="Travel Requests">
+    <lightning-datatable key-field="Id"
+                         data={travelReqData.data}
+                         columns={column}
+                         onrowaction={handleRowActions}
+    ></lightning-datatable>
+    <lightning-card>
+      <c-create-travel-request oncreated={handleSuccess}></c-create-travel-request>
+    </lightning-card>
+    <div>
+    </div>
+  </lightning-card>
+</div>
+<div if:true={showLoadingSpinner}>
+  <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+</div>
+<template if:true={showModal}>
+  <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <h2 class="slds-text-heading_medium slds-hypernate">Expenses</h2>
+      </header>
+      <div class="slds-modal__content slds-var-p-around_medium">
+        <template if:true={tRquestDataRow}>
+          <c-display-expenses travelrequestdatarow={tRquestDataRow}></c-display-expenses>
+        </template>
+      </div>
+      <footer class="slds-modal__footer">
+        <lightning-button value="Close" label="Close" onclick={handleCloseModal}></lightning-button>
+      </footer>
+    </div>
+  </section>
+</template>
+<template if:true={isEditPage}>
+  <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <h2 class="slds-text-heading_medium slds-hyphenate">Edit {travelRequestRow.travelRequestName}</h2>
+      </header>
+      <div class="slds-modal__content slds-var-p-around_medium">
+        <lightning-record-edit-form layout-type="Full" record-id={currentRecordId} object-api-name="Travel_Request__c" onsubmit={handleSubmit} onsuccess={handleSuccess}>
+          <lightning-output-field field-name="Id"></lightning-output-field>
+          <lightning-input-field field-name="Name"></lightning-input-field>
+          <lightning-input-field field-name="Status__c"></lightning-input-field>
+          <lightning-input-field field-name="Request_Name__c"></lightning-input-field>
+          <lightning-input-field field-name="Place_of_Travel__c"></lightning-input-field>
+          <lightning-input-field field-name="Start_Date__c"></lightning-input-field>
+          <lightning-input-field field-name="End_Date__c"></lightning-input-field>
+          <lightning-input-field field-name="Out_of_State__c"></lightning-input-field>
+          <div style="text-align: center;">
+            <lightning-button class="slds-m-var-top_small" variant="brand" label="Update Record" type="submit"></lightning-button>
+          </div>
+        </lightning-record-edit-form>
+      </div>
+    </div>
+  </section>
+</template>
+</template>
